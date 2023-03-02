@@ -1,0 +1,55 @@
+<!DOCTTYPE html>
+<html>
+      <head>
+      	  <title>哇哈哈</title>
+      </head>
+
+
+      <body>
+      	   <h1> BMI計算器 </h1>
+
+      	   <table border="2">
+      	   	  <tr>
+                  <th>身高</th>
+                  <th>體重</th>
+              </tr>
+              <tr>
+              	  <td><input type="number" id="height" name="heligh"placeholder="公尺"></td>
+              	  <td> <input type="number" id="weight" name="welight" placeholder="公斤"></td>
+              </tr>
+              <tr>
+              	   <td></td>
+              	   <td><button id="calculator" onclick="calculate()">計算</td>
+              	</tr>
+              </table>
+
+              <script type="text/javascript">
+                    function  calculate(){
+                        let height = document.querySelector("#height").value ; // 取得身高
+                        let weight = document.querySelector("#weight").value ; // 取得體重
+                        alert("身高"+height) ;
+                        alert("體重"+weight) ;
+                        let bmi =weight /(height*height); //計算 BMI
+                        alert("bmi"+bmi);
+                       
+                        if(bmi < 18.5){
+                        	alert("體重過輕");
+                        }else if(bmi >= 18.5  && bmi < 24){
+                        	 alert("健康體位");
+                        }else{
+                        	 	alert("體位異常");
+                        	 }
+                        }
+                    
+                </script>
+      	<h1> gan </h1>
+      	<h2> gan </h2>
+      	<h3> gan </h3>
+      	<h4> gan </h4>
+      	<h5> gan </h5>
+      	
+      	
+         這是我的網頁
+       
+      </body>
+</html>
