@@ -1,41 +1,81 @@
 
 <style>
+
+	.result{
+		width:100px;
+		height:100px;
+		color:green;
+		font-size:20px;
+	}
 #result1{
-	
+
 	background-color:red;
-	width: 100px; 
-	height: 100px;
-	color:white;
-	font-weight: bold;
-	font-size: 20px;
+	
 }
 #result2{
-	background-size: 300px 100px;
+	
 	background-color:blue;
-	width: 300px; 
-	height: 100px;
-    color:white;
-	font-weight: bold;
-	font-size: 20px;
+	
 }
+button{
+	width: 300px;
+	height: 300px;
+	font-size:30px;
+}
+
+  #cancel{
+  	background-color:red: rgba(0,255,0,0.5);
+color:white;
+  }
 
 
 </style>
 
-<div id='result1'>
+ <div id='result1' class="result">
 </div>
 
-<div id='result2'>
+<div id='result2'  class="result">
 </div>
 
+<div>
+	<label for="x">ive</label>
+	<input type="number" name="x"id="x">
+	<br>
+	<label for="x">Newjeans</label>
+	<input type="number" name="y"id="y">
+    <br>
+    <button id="btn" onclick="show()">顯示投票結果</button>
+    <button id="cancel" onclick="cancel()">恢復原始狀態
+    </button>
+    
+</div>
+
+<!--   這是HTML註解 -->
 <script>
 let message= "hello";
 
-let x = "ive";
-let y = "Newjeans";
+let x = "ive<img src='https://s.yimg.com/ny/api/res/1.2/0_JzVaxbys2OvTlUidaUNw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ3Nw--/https://media.zenfs.com/en/tc.koreastardaily.com/e76e615de0960990d069438a87001f50' width='50' height='50'>";
+let y = "Newjeans<img src='https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg' width='50' height='50'>";
 
 
-document.querySelector("#result1").innerText =x;
-document.querySelector("#result2").innerText =y;
+document.querySelector("#result1").innerHTML =x;
+document.querySelector("#result2").innerHTML =y;
+function show(){
 
+	let result_x= document.querySelector("#x").value
+	let result_y= document.querySelector("#y").value
+	document.querySelector("#result1").style.width=result_x+"px";
+	document.querySelector("#result2").style.width=result_y+"px";
+	
+
+}
+function cancel (){
+	document.querySelector("#result1").style.width="100px"
+    document.querySelector("#result2").style.width="100px"
+
+}
+//這是註解
+/*
+跨行註解
+*/
 </script>
